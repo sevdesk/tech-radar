@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <!-- SEO -->
-    <title>Tech-Radar sevDesk</title>
+    <title>sevDesk Tech Radar - 2022 Q2</title>
 
     <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
     <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
@@ -20,6 +20,24 @@
 <svg id="radar"></svg>
 
 <script>
+    // Some constants to make the overview more easy to read and maintain
+    // Quadrants
+    const PLATFORM_AND_SERVICES = 0;
+    const MONITORING_LOGGING_AND_SECURITY = 1;
+    const CODING_AND_FRAMEWORKS = 2;
+    const CI_CD_INFRASTRUCTURE_AND_AUTOMATION = 3;
+
+    // Ring
+    const ACTIVE = 0;
+    const TRIAL = 1;
+    const EVALUATE = 2;
+    const ON_HOLD = 3;
+
+    // Icon indicating change
+    const MOVED_OUT = -1; // (triangle pointing down)
+    const NOT_MOVED = 0;  // (circle)
+    const MOVED_IN = 1;  //moved in  (triangle pointing up)
+
     radar_visualization({
         svg_id: "radar",
         width: 1450,
@@ -29,7 +47,7 @@
             grid: "#bbb",
             inactive: "#ddd"
         },
-        title: "Tech Radar - 2022.04",
+        title: "sevDesk Tech Radar - 2022 Q2",
         quadrants: [
             {name: "Platform & Services"},
             {name: "Monitoring, Logging & Security"},
@@ -44,310 +62,342 @@
         ],
         print_layout: true,
         entries: [
-            {
-                label: "Python",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "PHP",
-                quadrant: 2,
-                ring: 3,
-                moved: -1
-            },
-            {
-                label: "aws-sdk-go",
-                quadrant: 2,
-                ring: 1,
-                moved: 1
-            },
-            {
-                label: "JavaScript",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Java",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Swift",
-                quadrant: 2,
-                ring: 0,
-                moved: -1
-            },
-            {
-                label: "Kotlin",
-                quadrant: 2,
-                ring: 0,
-                moved: 1
-            },
-            {
-                label: "Spring Boot",
-                quadrant: 2,
-                ring: 0,
-                moved: 1
-            },
-            {
-                label: "Exposed",
-                quadrant: 2,
-                ring: 1,
-                moved: 1
-            },
-            {
-                label: "Node.js",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
-            },
+
+            /////////////////////////////////////////////////
+            //     .          
+            //    .          
+            //   . ;.        
+            //    .;
+            //     ;;.
+            //   ;.;;
+            //   ;;;;.       Edit the following objects to 
+            //   ;;;;;       add or modify the technologies
+            //   ;;;;;       on the sevDesk tech radar.
+            //   ;;;;;
+            //   ;;;;;
+            //   ;;;;;
+            // ..;;;;;..
+            //  ':::::'
+             //   ':`
+            /////////////////////////////////////////////////
+            
+            /////////////////////////////////////////////////
+            // Platform & Services
+            /////////////////////////////////////////////////
             {
                 label: "MySQL",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "MongoDB",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
-            {
-                label: "React",
-                quadrant: 2,
-                ring: 1,
-                moved: 1
-            },
-            {
-                label: "Vue.js",
-                quadrant: 2,
-                ring: 1,
-                moved: 0
-            },
-            {
-                label: "Bootstrap",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Less",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Keras",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Lavarel",
-                quadrant: 2,
-                ring: 3,
-                moved: -1
-            },
-            {
-                label: "SCSS",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Golang",
-                quadrant: 2,
-                ring: 1,
-                moved: 0
-            },
-                        {
-                label: "Typescript",
-                quadrant: 2,
-                ring: 1,
-                moved: 1
-            },
-            {
-                label: "gRPC",
-                quadrant: 2,
-                ring: 2,
-                moved: 0
-            },
-            {
-                label: "AngularJS",
-                quadrant: 2,
-                ring: 3,
-                moved: 0
-            },
-            {
-                label: "Zend Framework",
-                quadrant: 2,
-                ring: 3,
-                moved: 0
-            },
-
-
             {
                 label: "AWS Lambda",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS Elastic Beanstalk",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS EKS",
-                quadrant: 0,
-                ring: 1,
-                moved: 1
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: TRIAL,
+                moved: MOVED_IN
             },
             {
                 label: "Cloudflare",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
-            {
-                label: "Gitlab CI",
-                quadrant: 3,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Bitbucket",
-                quadrant: 3,
-                ring: 3,
-                moved: 0
-            },
-            {
-                label: "Jenkins",
-                quadrant: 3,
-                ring: 3,
-                moved: 0
-            },
-            {
-                label: "Harbor",
-                quadrant: 3,
-                ring: 0,
-                moved: 1
-            },
-            {
-                label: "Nexus",
-                quadrant: 3,
-                ring: 3,
-                moved: -1
-            },
-            {
-                label: "Sonarqube",
-                quadrant: 3,
-                ring: 1,
-                moved: 1
-            },
-            {
-                label: "Docker",
-                quadrant: 3,
-                ring: 1,
-                moved: 0
-            },
-            {
-                label: "Kubernetes",
-                quadrant: 3,
-                ring: 0,
-                moved: 1
-            },
-            {
-                label: "Terraform",
-                quadrant: 3,
-                ring: 1,
-                moved: 1
-            },
-            {
-                label: "Ansible",
-                quadrant: 3,
-                ring: 1,
-                moved: 1
-            },
-            {
-                label: "AWS Cloudformation",
-                quadrant: 3,
-                ring: 2,
-                moved: 1
-            },
-            {
-                label: "Serverless",
-                quadrant: 3,
-                ring: 0,
-                moved: 0
-            },
+                        
+            /////////////////////////////////////////////////
+            // Monitoring, Logging & Security
+            /////////////////////////////////////////////////
             {
                 label: "NewRelic",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Kibana",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Logstash",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Elasticsearch",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Grafana",
-                quadrant: 1,          // 0,1,2,3 (counting clockwise, starting from bottom right)
-                ring: 1,              // 0,1,2,3 (starting from inside)
-                moved: 0             // -1 = moved out (triangle pointing down)
-                //  0 = not moved (circle)
-                //  1 = moved in  (triangle pointing up)
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "Prometheus",
-                quadrant: 1,
-                ring: 1,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS KMS",
-                quadrant: 1,
-                ring: 1,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS Cloudwatch",
-                quadrant: 1,
-                ring: 1,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS Trusted Advisor",
-                quadrant: 1,
-                ring: 3,
-                moved: -1
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
             },
             {
                 label: "Clair Scanner",
-                quadrant: 1,
-                ring: 3,
-                moved: -1
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
             },
+            
+            /////////////////////////////////////////////////
+            // Coding & Frameworks
+            /////////////////////////////////////////////////
+            {
+                label: "Python",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "PHP",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
+            },
+            {
+                label: "aws-sdk-go",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: MOVED_IN
+            },
+            {
+                label: "JavaScript",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Typescript",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Java",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Swift",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: MOVED_OUT
+            },
+            {
+                label: "Kotlin",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: MOVED_IN
+            },
+            {
+                label: "Spring Boot",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: MOVED_IN
+            },
+            {
+                label: "Exposed",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: MOVED_IN
+            },
+            {
+                label: "Node.js",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "React",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: MOVED_IN
+            },
+            {
+                label: "Vue.js",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Bootstrap",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Less",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Keras",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Lavarel",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
+            },
+            {
+                label: "SCSS",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Golang",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: NOT_MOVED
+            },
+            {
+                label: "gRPC",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: EVALUATE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "AngularJS",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ON_HOLD,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Zend Framework",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ON_HOLD,
+                moved: NOT_MOVED
+            },
+           
+            
+            /////////////////////////////////////////////////
+            // CI/CD, Infrastructure & Automation
+            /////////////////////////////////////////////////
+            {
+                label: "Gitlab CI",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Bitbucket",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ON_HOLD,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Jenkins",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ON_HOLD,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Harbor",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ACTIVE,
+                moved: MOVED_IN
+            },
+            {
+                label: "Nexus",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
+            },
+            {
+                label: "Sonarqube",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: TRIAL,
+                moved: MOVED_IN
+            },
+            {
+                label: "Docker",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: TRIAL,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Kubernetes",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ACTIVE,
+                moved: MOVED_IN
+            },
+            {
+                label: "Terraform",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: TRIAL,
+                moved: MOVED_IN
+            },
+            {
+                label: "Ansible",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: TRIAL,
+                moved: MOVED_IN
+            },
+            {
+                label: "AWS Cloudformation",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: EVALUATE,
+                moved: MOVED_IN
+            },
+            {
+                label: "Serverless",
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+
         ]
     });
 </script>
@@ -356,26 +406,29 @@
 
         <td>
 
-            <h3>Was ist der sevDesk TechRadar?</h3>
+            <h3>What is the sevDesk TechRadar?</h3>
 
             <p>
-                Der sevDesk TechRadar dient dazu, unseren TechStack anhand mehrerer Kriterien übersichtlich darzustellen.
-                Neben den verschiedenen Einsatzbereichen teilen wir unsere Technologien auch nach Nutzungsgrad ein.
+                The sevDesk TechRadar shows the technologies we are using at sevDesk.
+                We arrange the technologies in a ring and four categories.
+                Four circles inside the ring show how we use that technology:
             </p>
 
             <ul>
-                <li><strong>Active</strong> — Technologien, die wir für unsere Hauptanwendungen produktiv nutzen und unseren Kunden
-                    zur Verfügung stellen. Mit diesen Technologien arbeiten wir tagtäglich und konnten bereits viel Erfahrung
-                    sammeln.</li>
-                <li><strong>Trial | Test(ing)</strong> — Technologien, die wir bereits für erste Testprojekte genutzt haben.
-                    Dabei handelt es sich zumeist um kleinere und unkritische Projekte, mit denen wir bestimmte Probleme
-                    nachstellen und lösen möchten.</li>
-                <li><strong>Evaluate | Observe | Watch | Consider | Asses</strong> — Technologien, die für uns aufgrund bestimmter
-                    Eigenschaft interessant sind und das Potenzial haben, einen großen Mehrwert zu liefern. Diese zumeist
-                    sehr neuen Technologien werden weiter beobachtet und bei Gelegenheit in ersten Versuchen evaluiert.</li>
-                <li><strong>(On) Hold | Pause</strong> — Technologien, die wir nicht mehr für neue Projekte verwenden, da
-                    es mittlerweile bessere Alternativen gibt. Für neue Projekte sollten andere Technologien gewählt werden,
-                    können aber weiterhin für Bestandsprojekte in Verwendung sein.</li>
+                <li><strong>Active</strong> 
+                    - Technologies that we use in production. We know a lot about these technologies and use them on a daily basis.
+                </li>
+                <li><strong>Trial | Test(ing)</strong> 
+                    - Technologies that we are using for protoypes and internal projects. These projects are not business-critical. We
+                    actively evaluate the potential of the technology.
+                </li>
+                <li><strong>Evaluate | Observe | Watch | Consider | Asses</strong>
+                    - Technologies that might become relevant for sevDesk soon. We might consider using these technologies in the future for prototypes
+                    or production applications.
+                </li>
+                <li><strong>(On) Hold | Pause</strong> 
+                    - Technologies that we do not use for projects. Existing projects using that technology will be migrated to active alternatives.
+               </li>
             </ul>
 
         </td><td>
@@ -383,7 +436,7 @@
         <h3>What is the purpose?</h3>
 
         <p>
-            The Tech Radar is a tool to inspire and support engineering teams at Zalando to pick the best technologies for
+            The Tech Radar is a tool to inspire and support engineering teams at sevDesk to pick the best technologies for
             new projects; it provides a platform to share knowledge and experience in technologies, to reflect on technology
             decisions and continuously evolve our technology landscape. Based on the <a href="https://www.thoughtworks.com/radar">
             pioneering work of ThoughtWorks</a>, our Tech Radar sets out the changes in technologies that are interesting in
@@ -394,8 +447,8 @@
         <h3>How do we maintain it?</h3>
 
         <p>
-            The Tech Radar is maintained by the <i>sevDesk Dev Chapter</i>.
-            The Dev chapter self organises to maintain the Tech Radar documents, including this public version.
+            The Tech Radar is maintained by the <i>sevDesk Tech Lead Chapter</i>.
+            The Tech Lead ChapterDev chapter self organises to maintain the Tech Radar documents, including this public version.
             Assignment of technologies to rings is the outcome of ring change proposals, which are discussed and voted
             on in quarterly Tech Radar meetings. The Tech Radar depends on active participation and input from all engineering teams at
             sevDesk.
