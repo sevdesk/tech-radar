@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <!-- SEO -->
-    <title>Tech-Radar sevDesk</title>
+    <title>sevDesk Tech Radar - 2022 Q2</title>
 
     <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
     <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
@@ -29,7 +29,7 @@
             grid: "#bbb",
             inactive: "#ddd"
         },
-        title: "Tech Radar - 2022.04",
+        title: "sevDesk Tech Radar - 2022 Q2",
         quadrants: [
             {name: "Platform & Services"},
             {name: "Monitoring, Logging & Security"},
@@ -44,6 +44,127 @@
         ],
         print_layout: true,
         entries: [
+            // Example
+            //
+            //  {
+            //    label: "My funky technology",
+            //    quadrant: 1,          // 0,1,2,3 (counting clockwise, starting from bottom right)
+            //    ring: 1,              // 0,1,2,3 (starting from inside)
+            //    moved: 0              // -1 = moved out (triangle pointing down)
+            //                          //  0 = not moved (circle)
+            //                          //  1 = moved in  (triangle pointing up)
+            //  },
+            
+            
+             /////////////////////////////////////////////////
+            // Platform & Services
+            /////////////////////////////////////////////////
+            {
+                label: "MySQL",
+                quadrant: 0,
+                ring: 0,
+                moved: 0
+            },
+            {
+                label: "MongoDB",
+                quadrant: 0,
+                ring: 0,
+                moved: 0
+            },
+            {
+                label: "AWS Lambda",
+                quadrant: 0,
+                ring: 0,
+                moved: 0
+            },
+            {
+                label: "AWS Elastic Beanstalk",
+                quadrant: 0,
+                ring: 0,
+                moved: 0
+            },
+            {
+                label: "AWS EKS",
+                quadrant: 0,
+                ring: 1,
+                moved: 1
+            },
+            {
+                label: "Cloudflare",
+                quadrant: 0,
+                ring: 0,
+                moved: 0
+            },
+                        
+            /////////////////////////////////////////////////
+            // Monitoring, Logging & Security
+            /////////////////////////////////////////////////
+            {
+                label: "NewRelic",
+                quadrant: 1,
+                ring: 0,
+                moved: 0
+            },
+            {
+                label: "Kibana",
+                quadrant: 1,
+                ring: 0,
+                moved: 0
+            },
+            {
+                label: "Logstash",
+                quadrant: 1,
+                ring: 0,
+                moved: 0
+            },
+            {
+                label: "Elasticsearch",
+                quadrant: 1,
+                ring: 0,
+                moved: 0
+            },
+            {
+                label: "Grafana",
+                quadrant: 1,          // 0,1,2,3 (counting clockwise, starting from bottom right)
+                ring: 1,              // 0,1,2,3 (starting from inside)
+                moved: 0             // -1 = moved out (triangle pointing down)
+                //  0 = not moved (circle)
+                //  1 = moved in  (triangle pointing up)
+            },
+            {
+                label: "Prometheus",
+                quadrant: 1,
+                ring: 1,
+                moved: 0
+            },
+            {
+                label: "AWS KMS",
+                quadrant: 1,
+                ring: 1,
+                moved: 0
+            },
+            {
+                label: "AWS Cloudwatch",
+                quadrant: 1,
+                ring: 1,
+                moved: 0
+            },
+            {
+                label: "AWS Trusted Advisor",
+                quadrant: 1,
+                ring: 3,
+                moved: -1
+            },
+            {
+                label: "Clair Scanner",
+                quadrant: 1,
+                ring: 3,
+                moved: -1
+            },
+            
+            /////////////////////////////////////////////////
+            // Coding & Frameworks
+            /////////////////////////////////////////////////
             {
                 label: "Python",
                 quadrant: 2,
@@ -104,19 +225,7 @@
                 ring: 0,
                 moved: 0
             },
-            {
-                label: "MySQL",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "MongoDB",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
-            },
-            {
+                        {
                 label: "React",
                 quadrant: 2,
                 ring: 1,
@@ -188,32 +297,11 @@
                 ring: 3,
                 moved: 0
             },
-
-
-            {
-                label: "AWS Lambda",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "AWS Elastic Beanstalk",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "AWS EKS",
-                quadrant: 0,
-                ring: 1,
-                moved: 1
-            },
-            {
-                label: "Cloudflare",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
-            },
+           
+            
+            /////////////////////////////////////////////////
+            // CI/CD, Infrastructure & Automation
+            /////////////////////////////////////////////////
             {
                 label: "Gitlab CI",
                 quadrant: 3,
@@ -286,68 +374,7 @@
                 ring: 0,
                 moved: 0
             },
-            {
-                label: "NewRelic",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Kibana",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Logstash",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Elasticsearch",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
-            },
-            {
-                label: "Grafana",
-                quadrant: 1,          // 0,1,2,3 (counting clockwise, starting from bottom right)
-                ring: 1,              // 0,1,2,3 (starting from inside)
-                moved: 0             // -1 = moved out (triangle pointing down)
-                //  0 = not moved (circle)
-                //  1 = moved in  (triangle pointing up)
-            },
-            {
-                label: "Prometheus",
-                quadrant: 1,
-                ring: 1,
-                moved: 0
-            },
-            {
-                label: "AWS KMS",
-                quadrant: 1,
-                ring: 1,
-                moved: 0
-            },
-            {
-                label: "AWS Cloudwatch",
-                quadrant: 1,
-                ring: 1,
-                moved: 0
-            },
-            {
-                label: "AWS Trusted Advisor",
-                quadrant: 1,
-                ring: 3,
-                moved: -1
-            },
-            {
-                label: "Clair Scanner",
-                quadrant: 1,
-                ring: 3,
-                moved: -1
-            },
+
         ]
     });
 </script>
@@ -356,26 +383,29 @@
 
         <td>
 
-            <h3>Was ist der sevDesk TechRadar?</h3>
+            <h3>What is the sevDesk TechRadar?</h3>
 
             <p>
-                Der sevDesk TechRadar dient dazu, unseren TechStack anhand mehrerer Kriterien übersichtlich darzustellen.
-                Neben den verschiedenen Einsatzbereichen teilen wir unsere Technologien auch nach Nutzungsgrad ein.
+                The sevDesk TechRadar shows the technologies we are using at sevDesk.
+                We arrange the technologies in a ring and four categories.
+                Four circles inside the ring show how we use that technology:
             </p>
 
             <ul>
-                <li><strong>Active</strong> — Technologien, die wir für unsere Hauptanwendungen produktiv nutzen und unseren Kunden
-                    zur Verfügung stellen. Mit diesen Technologien arbeiten wir tagtäglich und konnten bereits viel Erfahrung
-                    sammeln.</li>
-                <li><strong>Trial | Test(ing)</strong> — Technologien, die wir bereits für erste Testprojekte genutzt haben.
-                    Dabei handelt es sich zumeist um kleinere und unkritische Projekte, mit denen wir bestimmte Probleme
-                    nachstellen und lösen möchten.</li>
-                <li><strong>Evaluate | Observe | Watch | Consider | Asses</strong> — Technologien, die für uns aufgrund bestimmter
-                    Eigenschaft interessant sind und das Potenzial haben, einen großen Mehrwert zu liefern. Diese zumeist
-                    sehr neuen Technologien werden weiter beobachtet und bei Gelegenheit in ersten Versuchen evaluiert.</li>
-                <li><strong>(On) Hold | Pause</strong> — Technologien, die wir nicht mehr für neue Projekte verwenden, da
-                    es mittlerweile bessere Alternativen gibt. Für neue Projekte sollten andere Technologien gewählt werden,
-                    können aber weiterhin für Bestandsprojekte in Verwendung sein.</li>
+                <li><strong>Active</strong> 
+                    - Technologies that we use in production. We know a lot about these technologies and use them on a daily basis.
+                </li>
+                <li><strong>Trial | Test(ing)</strong> 
+                    - Technologies that we are using for protoypes and internal projects. These projects are not business-critical. We
+                    actively evaluate the potential of the technology.
+                </li>
+                <li><strong>Evaluate | Observe | Watch | Consider | Asses</strong> — 
+                    - Technologies that might become relevant for sevDesk soon. We might consider using these technologies in the future for prototypes
+                    or production applications.
+                </li>
+                <li><strong>(On) Hold | Pause</strong> 
+                    - Technologies that we do not use for projects. Existing projects using that technology will be migrated to active alternatives.
+               </li>
             </ul>
 
         </td><td>
@@ -383,7 +413,7 @@
         <h3>What is the purpose?</h3>
 
         <p>
-            The Tech Radar is a tool to inspire and support engineering teams at Zalando to pick the best technologies for
+            The Tech Radar is a tool to inspire and support engineering teams at sevDesk to pick the best technologies for
             new projects; it provides a platform to share knowledge and experience in technologies, to reflect on technology
             decisions and continuously evolve our technology landscape. Based on the <a href="https://www.thoughtworks.com/radar">
             pioneering work of ThoughtWorks</a>, our Tech Radar sets out the changes in technologies that are interesting in
@@ -394,8 +424,8 @@
         <h3>How do we maintain it?</h3>
 
         <p>
-            The Tech Radar is maintained by the <i>sevDesk Dev Chapter</i>.
-            The Dev chapter self organises to maintain the Tech Radar documents, including this public version.
+            The Tech Radar is maintained by the <i>sevDesk Tech Lead Chapter</i>.
+            The Tech Lead ChapterDev chapter self organises to maintain the Tech Radar documents, including this public version.
             Assignment of technologies to rings is the outcome of ring change proposals, which are discussed and voted
             on in quarterly Tech Radar meetings. The Tech Radar depends on active participation and input from all engineering teams at
             sevDesk.
