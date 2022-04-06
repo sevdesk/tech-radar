@@ -20,6 +20,24 @@
 <svg id="radar"></svg>
 
 <script>
+    // Some constants to make the overview more easy to read and maintain
+    // Quadrants
+    const PLATFORM_AND_SERVICES = 0;
+    const MONITORING_LOGGING_AND_SECURITY = 1;
+    const CODING_AND_FRAMEWORKS = 2;
+    const CI_CD_INFRASTRUCTURE_AND_AUTOMATION = 3;
+
+    // Ring
+    const ACTIVE = 0;
+    const TRIAL = 1;
+    const EVALUATE = 2;
+    const ON_HOLD = 3;
+
+    // Icon indicating change
+    const MOVED_OUT = -1; // (triangle pointing down)
+    const NOT_MOVED = 0;  // (circle)
+    const MOVED_IN = 1;  //moved in  (triangle pointing up)
+
     radar_visualization({
         svg_id: "radar",
         width: 1450,
@@ -44,56 +62,63 @@
         ],
         print_layout: true,
         entries: [
-            // Example
-            //
-            //  {
-            //    label: "My funky technology",
-            //    quadrant: 1,          // 0,1,2,3 (counting clockwise, starting from bottom right)
-            //    ring: 1,              // 0,1,2,3 (starting from inside)
-            //    moved: 0              // -1 = moved out (triangle pointing down)
-            //                          //  0 = not moved (circle)
-            //                          //  1 = moved in  (triangle pointing up)
-            //  },
+
+            /////////////////////////////////////////////////
+            //     .          
+            //    .          
+            //   . ;.        
+            //    .;
+            //     ;;.
+            //   ;.;;
+            //   ;;;;.       Edit the following objects to 
+            //   ;;;;;       add or modify the technologies
+            //   ;;;;;       on the sevDesk tech radar.
+            //   ;;;;;
+            //   ;;;;;
+            //   ;;;;;
+            // ..;;;;;..
+            //  ':::::'
+             //   ':`
+            /////////////////////////////////////////////////
             
-            
-             /////////////////////////////////////////////////
+            /////////////////////////////////////////////////
             // Platform & Services
             /////////////////////////////////////////////////
             {
                 label: "MySQL",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "MongoDB",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS Lambda",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS Elastic Beanstalk",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS EKS",
-                quadrant: 0,
-                ring: 1,
-                moved: 1
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: TRIAL,
+                moved: MOVED_IN
             },
             {
                 label: "Cloudflare",
-                quadrant: 0,
-                ring: 0,
-                moved: 0
+                quadrant: PLATFORM_AND_SERVICES,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
                         
             /////////////////////////////////////////////////
@@ -101,65 +126,63 @@
             /////////////////////////////////////////////////
             {
                 label: "NewRelic",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Kibana",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Logstash",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Elasticsearch",
-                quadrant: 1,
-                ring: 0,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Grafana",
-                quadrant: 1,          // 0,1,2,3 (counting clockwise, starting from bottom right)
-                ring: 1,              // 0,1,2,3 (starting from inside)
-                moved: 0             // -1 = moved out (triangle pointing down)
-                //  0 = not moved (circle)
-                //  1 = moved in  (triangle pointing up)
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "Prometheus",
-                quadrant: 1,
-                ring: 1,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS KMS",
-                quadrant: 1,
-                ring: 1,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS Cloudwatch",
-                quadrant: 1,
-                ring: 1,
-                moved: 0
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "AWS Trusted Advisor",
-                quadrant: 1,
-                ring: 3,
-                moved: -1
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
             },
             {
                 label: "Clair Scanner",
-                quadrant: 1,
-                ring: 3,
-                moved: -1
+                quadrant: MONITORING_LOGGING_AND_SECURITY,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
             },
             
             /////////////////////////////////////////////////
@@ -167,135 +190,135 @@
             /////////////////////////////////////////////////
             {
                 label: "Python",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "PHP",
-                quadrant: 2,
-                ring: 3,
-                moved: -1
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
             },
             {
                 label: "aws-sdk-go",
-                quadrant: 2,
-                ring: 1,
-                moved: 1
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: MOVED_IN
             },
             {
                 label: "JavaScript",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
+            },
+            {
+                label: "Typescript",
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Java",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Swift",
-                quadrant: 2,
-                ring: 0,
-                moved: -1
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: MOVED_OUT
             },
             {
                 label: "Kotlin",
-                quadrant: 2,
-                ring: 0,
-                moved: 1
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: MOVED_IN
             },
             {
                 label: "Spring Boot",
-                quadrant: 2,
-                ring: 0,
-                moved: 1
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: MOVED_IN
             },
             {
                 label: "Exposed",
-                quadrant: 2,
-                ring: 1,
-                moved: 1
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: MOVED_IN
             },
             {
                 label: "Node.js",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
-                        {
+            {
                 label: "React",
-                quadrant: 2,
-                ring: 1,
-                moved: 1
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: MOVED_IN
             },
             {
                 label: "Vue.js",
-                quadrant: 2,
-                ring: 1,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "Bootstrap",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Less",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Keras",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Lavarel",
-                quadrant: 2,
-                ring: 3,
-                moved: -1
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
             },
             {
                 label: "SCSS",
-                quadrant: 2,
-                ring: 0,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Golang",
-                quadrant: 2,
-                ring: 1,
-                moved: 0
-            },
-                        {
-                label: "Typescript",
-                quadrant: 2,
-                ring: 1,
-                moved: 1
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "gRPC",
-                quadrant: 2,
-                ring: 2,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: EVALUATE,
+                moved: NOT_MOVED
             },
             {
                 label: "AngularJS",
-                quadrant: 2,
-                ring: 3,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ON_HOLD,
+                moved: NOT_MOVED
             },
             {
                 label: "Zend Framework",
-                quadrant: 2,
-                ring: 3,
-                moved: 0
+                quadrant: CODING_AND_FRAMEWORKS,
+                ring: ON_HOLD,
+                moved: NOT_MOVED
             },
            
             
@@ -304,75 +327,75 @@
             /////////////////////////////////////////////////
             {
                 label: "Gitlab CI",
-                quadrant: 3,
-                ring: 0,
-                moved: 0
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
             {
                 label: "Bitbucket",
-                quadrant: 3,
-                ring: 3,
-                moved: 0
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ON_HOLD,
+                moved: NOT_MOVED
             },
             {
                 label: "Jenkins",
-                quadrant: 3,
-                ring: 3,
-                moved: 0
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ON_HOLD,
+                moved: NOT_MOVED
             },
             {
                 label: "Harbor",
-                quadrant: 3,
-                ring: 0,
-                moved: 1
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ACTIVE,
+                moved: MOVED_IN
             },
             {
                 label: "Nexus",
-                quadrant: 3,
-                ring: 3,
-                moved: -1
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ON_HOLD,
+                moved: MOVED_OUT
             },
             {
                 label: "Sonarqube",
-                quadrant: 3,
-                ring: 1,
-                moved: 1
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: TRIAL,
+                moved: MOVED_IN
             },
             {
                 label: "Docker",
-                quadrant: 3,
-                ring: 1,
-                moved: 0
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: TRIAL,
+                moved: NOT_MOVED
             },
             {
                 label: "Kubernetes",
-                quadrant: 3,
-                ring: 0,
-                moved: 1
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ACTIVE,
+                moved: MOVED_IN
             },
             {
                 label: "Terraform",
-                quadrant: 3,
-                ring: 1,
-                moved: 1
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: TRIAL,
+                moved: MOVED_IN
             },
             {
                 label: "Ansible",
-                quadrant: 3,
-                ring: 1,
-                moved: 1
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: TRIAL,
+                moved: MOVED_IN
             },
             {
                 label: "AWS Cloudformation",
-                quadrant: 3,
-                ring: 2,
-                moved: 1
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: EVALUATE,
+                moved: MOVED_IN
             },
             {
                 label: "Serverless",
-                quadrant: 3,
-                ring: 0,
-                moved: 0
+                quadrant: CI_CD_INFRASTRUCTURE_AND_AUTOMATION,
+                ring: ACTIVE,
+                moved: NOT_MOVED
             },
 
         ]
@@ -399,7 +422,7 @@
                     - Technologies that we are using for protoypes and internal projects. These projects are not business-critical. We
                     actively evaluate the potential of the technology.
                 </li>
-                <li><strong>Evaluate | Observe | Watch | Consider | Asses</strong> — 
+                <li><strong>Evaluate | Observe | Watch | Consider | Asses</strong>
                     - Technologies that might become relevant for sevDesk soon. We might consider using these technologies in the future for prototypes
                     or production applications.
                 </li>
